@@ -1,10 +1,10 @@
 web: 
     image: 'gitlab/gitlab-ee:latest'
     restart: always
-    hostname: 'gitlab.dunhill.com'
+    hostname: <your-server-hostname>
     environment: 
         GITLAB_OMNIBUS_CONFIG: |
-        external_url 'http://gitlab.dunhill.com:8929'
+        external_url 'http://<your-server-ip-host>'
         gitlab_rails['gitlab_shell_ssh_port'] = 2224
 ports: 
   - '8929:8929'
